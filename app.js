@@ -6,8 +6,9 @@ window.onload=function()
     {
         /*caused event to be dispatched that it needs to be canceled. */
         mouseEv.preventDefault();
+        var srchQuery=document.getElementById("heroes").value;
         var hrequest=new XMLHttpRequest();
-        var PHPurl="superheroes.php";
+        var PHPurl="superheroes.php?query="+ srchQuery;
 
         /*HANDLING THE RESPONSE TO the AJAX REQUEST */
         hrequest.onreadystatechange=function()
